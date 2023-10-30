@@ -2,10 +2,12 @@ package tests;
 
 import com.example.Feline;
 import com.example.Lion;
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
 
 import static org.junit.Assert.assertEquals;
 
@@ -23,10 +25,12 @@ public class LionParametrizedTest {
 
     @Parameterized.Parameters
     public static Object[][] getHasMane() {
-        return new Object[][]{
-                {"Самец", true},
-                {"Самка", false},
-        };
+        return new Object[][]{{"Самец", true}, {"Самка", false},};
+    }
+
+    @Before
+    public void initMocks() {
+        MockitoAnnotations.initMocks(this);
     }
 
     @Test

@@ -20,20 +20,20 @@ public class LionAlexTest {
     public void getResultingCountKittensLionAlex() throws Exception {
         LionAlex lionAlex = new LionAlex(feline);
         int expectedKittensLionAlex = 0;
-        assertEquals("У льва Алекса нету котят !", lionAlex.getKittens(), expectedKittensLionAlex);
+        assertEquals("У льва Алекса нету котят !", expectedKittensLionAlex, lionAlex.getKittens());
     }
 
     @Test
     public void getPlaceOfLivingIsCorrect() throws Exception {
         LionAlex lionAlex = new LionAlex(feline);
         String expectedPlaceLionAlex = "Нью-Йоркский зоопарк";
-        assertEquals("Лев Алекс проживает не в этом месте !", lionAlex.getPlaceOfLiving(), expectedPlaceLionAlex);
+        assertEquals("Лев Алекс проживает не в этом месте !", expectedPlaceLionAlex, lionAlex.getPlaceOfLiving());
     }
 
     @Test
     public void getFriendsIsCorrect() throws Exception {
         LionAlex lionAlex = new LionAlex(feline);
         List<String> expectedFriendsLionAlex = List.of("Зебра Марти", "Бегемотиха Глория", "Жираф Мелман");
-        assertEquals("Неверный список друзей льва Алекса !", lionAlex.getFriends(), expectedFriendsLionAlex);
+        assertEquals("Неверный список друзей льва Алекса !", expectedFriendsLionAlex, lionAlex.getFriends());
     }
 }
